@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Editar Producto</h2>
+
+  {% if error_message %}
+    <div style="color: red;">
+      <strong>{{ error_message }}</strong>
+    </div>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Actualizar Producto</button>
+  </form>
+
+  <br>
+  <a href="{% url 'inventario' %}">Volver al Inventario</a>
+{% endblock %}

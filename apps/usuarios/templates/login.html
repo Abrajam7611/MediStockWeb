@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Iniciar sesión</h2>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="input-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit">Iniciar sesión</button>
+                {% for message in messages %}
+                    <p class="error-message">{{ message }}</p>
+                {% endfor %}
+            </form>
+        </div>
+        <div class="welcome-box">
+            <h1>Bienvenido a MediStock</h1>
+            <img src="{% static 'images/LogoSfondo.png' %}" alt="Farmacia Genéricos">
+        </div>
+    </div>
+</body>
+</html>

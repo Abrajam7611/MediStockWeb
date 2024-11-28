@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediStock</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'inicio' %}">
+                <img src="{% static 'images/Icono.png' %}" alt="MediStock" class="logo-img">
+                <h1 class="logo-text">MediStock</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'ventas' %}">Ventas</a></li>
+                <li><a href="{% url 'inventario' %}">Inventario</a></li>
+                <li class="logout">
+                    <form action="{% url 'logout' %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="logout-button">
+                            <img src="{% static 'images/logout-icon.png' %}" alt="Cerrar sesión" class="logout-icon">
+                            <span>Cerrar sesión</span>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
