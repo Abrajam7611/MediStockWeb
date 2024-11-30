@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h3 class="text-center">Ventas Realizadas</h3>
+
+    <!-- Filtros de fecha -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <form method="GET" class="form-inline">
+                <label for="filtro_fecha" class="mr-2">Filtrar por:</label>
+                <select name="filtro_fecha" id="filtro_fecha" class="form-select" onchange="this.form.submit()">
+                    <option value="dia" {% if filtro_fecha == 'dia' %}selected{% endif %}>Hoy</option>
+                    <option value="mes" {% if filtro_fecha == 'mes' %}selected{% endif %}>Este mes</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tabla de ventas realizadas -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for venta in ventas_realizadas %}
+                            <tr>
+                                <td>{{ venta.nombre }}</td>
+                                <td>{{ venta.cantidad }}</td>
+                                <td>${{ venta.precio }}</td>
+                                <td>${{ venta.total }}</td>
+                                <td>{{ venta.fecha | date:"d/m/Y H:i" }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5" class="text-center text-muted">No hay ventas registradas para este periodo</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
