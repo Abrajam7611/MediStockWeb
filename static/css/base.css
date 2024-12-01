@@ -30,9 +30,15 @@ header .logo {
     align-items: center;
 }
 
+header .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;  /* Asegura que no haya subrayado en el enlace */
+}
+
 header .logo-img {
     width: 40px;
-    margin-right: 10px;
+    margin-right: 10px;  /* Espacio entre el icono y el texto */
 }
 
 header .logo-text {
@@ -77,38 +83,44 @@ nav ul li a:hover {
     align-items: center;
     margin-left: 20px;
 }
-
+/* -------------------------------------------------- */
+/* BOTÓN CERRAR SESIÓN                               */
+/* -------------------------------------------------- */
 .logout-button {
-    background: none;
-    border: none;
+    background-color: #39a196;  /* Fondo verde como los enlaces */
+    border: none;  /* Asegura que no haya borde blanco */
     color: white;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
-    padding: 6px 10px;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 14px;  /* Tamaño de fuente más pequeño */
+    padding: 5px 10px;  /* Menos padding para hacerlo más pequeño */
+    border-radius: 20px;  /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: none;  /* Elimina cualquier sombra no deseada */
 }
 
 .logout-button:hover {
-    color: #f14839;
-    transform: translateY(-2px);
+    background-color: #4ea097;  /* Cambio de color al pasar el cursor */
+    transform: translateY(-2px);  /* Efecto de elevación */
+}
+
+.logout-button:focus {
+    outline: none;  /* Elimina el borde de enfoque predeterminado */
+    box-shadow: none;  /* Elimina la sombra al hacer focus */
 }
 
 .logout-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+    width: 16px;  /* Icono más pequeño */
+    height: 16px;
+    margin-right: 8px;  /* Espacio entre el icono y el texto */
 }
 
 .logout-button span {
-    display: none;
+    display: inline;
     margin-left: 5px;
 }
 
-.logout-button:hover span {
-    display: inline;
-}
 
 /* -------------------------------------------------- */
 /* ESTILOS PARA EL CONTENIDO PRINCIPAL                */
