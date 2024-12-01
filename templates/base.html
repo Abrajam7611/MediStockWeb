@@ -28,7 +28,7 @@
                 <li><a href="{% url 'ventas_realizadas' %}">Ventas Realizadas</a></li>
                 <li><a href="{% url 'inventario' %}">Inventario</a></li>
                 <li class="logout">
-                    <form action="{% url 'logout' %}" method="POST">
+                    <form class="boton1" action="{% url 'logout' %}" method="POST">
                         {% csrf_token %}
                         <button type="submit" class="logout-button" aria-label="Cerrar sesión">
                             <img src="{% static 'images/logout-icon.png' %}" alt="Icono de cerrar sesión" class="logout-icon">
