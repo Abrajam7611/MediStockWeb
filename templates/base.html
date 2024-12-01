@@ -8,7 +8,10 @@
     <title>MediStock</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="{% static 'css/botones.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tabla_inventario.css' %}">
+    <link rel="stylesheet" href="{% static 'path/to/nuevoP.css' %}">
+    <link rel="stylesheet" href="{% static 'css/editar.css' %}">
 </head>
 <body>
     <header>
@@ -22,14 +25,14 @@
             <ul>
                 <li><a href="{% url 'inicio' %}">Inicio</a></li>
                 <li><a href="{% url 'ventas' %}">Vender</a></li>
-                <a href="{% url 'ventas_realizadas' %}">Ventas Realizadas</a>
+                <li><a href="{% url 'ventas_realizadas' %}">Ventas Realizadas</a></li>
                 <li><a href="{% url 'inventario' %}">Inventario</a></li>
                 <li class="logout">
                     <form action="{% url 'logout' %}" method="POST">
                         {% csrf_token %}
-                        <button type="submit" class="logout-button">
-                            <img src="{% static 'images/logout-icon.png' %}" alt="Cerrar sesión" class="logout-icon">
-                            <span>Cerrar sesión</span>
+                        <button type="submit" class="logout-button" aria-label="Cerrar sesión">
+                            <img src="{% static 'images/logout-icon.png' %}" alt="Icono de cerrar sesión" class="logout-icon">
+                            <span class="logout-text">Cerrar sesión</span>
                         </button>
                     </form>
                 </li>

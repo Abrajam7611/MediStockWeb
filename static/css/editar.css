@@ -1,0 +1,114 @@
+/* Estilo general de la página de edición de producto */
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 4px solid #4CAF50; /* Línea decorativa */
+    padding-bottom: 10px;
+  }
+  
+  /* Contenedor del formulario */
+  form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd; /* Borde sutil */
+  }
+  
+  /* Estilo de los campos de entrada y etiquetas */
+  form p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 15px;
+  }
+  
+  /* Efecto de enfoque en los campos de entrada */
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+    outline: none;
+  }
+  
+  /* Botón de envío */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+  }
+  
+  /* Efecto hover en el botón de envío */
+  button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+  
+  /* Estilo del enlace de volver al inventario */
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  a:hover {
+    color: #388e3c;
+    border-bottom: 2px solid #388e3c;
+  }
+  
+  /* Mensajes de error */
+  div[style*="color: red"] {
+    background-color: #fdecea;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo de los campos de entrada */
+  input::placeholder,
+  select::placeholder,
+  textarea::placeholder {
+    color: #aaa;
+  }
+  
+  /* Mejorar la apariencia de los campos de texto */
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  

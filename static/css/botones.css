@@ -1,0 +1,75 @@
+/* Estilo general para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  th, td {
+    border: 1px solid #ddd; /* Borde de la tabla */
+    padding: 8px; /* Espacio interno */
+    text-align: center; /* Centra el texto */
+  }
+  
+  th {
+    background-color: #f4f4f4; /* Color de fondo para encabezados */
+    color: #333; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color alterno para filas */
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1; /* Efecto hover */
+  }
+  
+  /* Estilo general para los botones */
+  .botones {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .botones i {
+    font-size: 16px; /* Tamaño del ícono */
+  }
+  
+  /* Botón de editar */
+  .botones.editar {
+    background-color: #4CAF50; /* Verde */
+  }
+  
+  .botones.editar:hover {
+    background-color: #45a049;
+  }
+  
+  /* Botón de eliminar */
+  .botones.eliminar {
+    background-color: #f44336; /* Rojo */
+  }
+  
+  .botones.eliminar:hover {
+    background-color: #da2b2b;
+  }
+  
+  /* Botón de agregar (para alineación a la derecha) */
+  .botones.agregar {
+    background-color: #008CBA; /* Azul */
+    float: right; /* Alinea el botón a la derecha */
+    margin-top: 10px; /* Espacio superior */
+  }
+  
+  .botones.agregar:hover {
+    background-color: #007bb5;
+  }
+  
