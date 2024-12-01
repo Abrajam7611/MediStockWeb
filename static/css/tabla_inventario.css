@@ -62,38 +62,6 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-.logout {
-    display: flex;
-    align-items: center;
-}
-
-.logout-button {
-    background: none;
-    border: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 5px;
-    transition: color 0.3s ease;
-}
-
-.logout-button:hover {
-    color: #f14839;
-}
-
-.logout-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
-
-.logout-button span {
-    margin-left: 5px;
-    font-weight: normal;
-}
-
 /* Contenido principal */
 main {
     padding: 20px;

@@ -87,40 +87,32 @@ nav ul li a:hover {
 /* BOTÓN CERRAR SESIÓN                               */
 /* -------------------------------------------------- */
 .logout-button {
-    background-color: #39a196;  /* Fondo verde como los enlaces */
+    background-color: #39a196;  /* Fondo verde */
     border: none;  /* Asegura que no haya borde blanco */
     color: white;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 14px;  /* Tamaño de fuente más pequeño */
-    padding: 5px 10px;  /* Menos padding para hacerlo más pequeño */
-    border-radius: 20px;  /* Bordes redondeados */
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: none;  /* Elimina cualquier sombra no deseada */
+    box-shadow: none;
 }
 
-.logout-button:hover {
-    background-color: #4ea097;  /* Cambio de color al pasar el cursor */
-    transform: translateY(-2px);  /* Efecto de elevación */
-}
-
-.logout-button:focus {
-    outline: none;  /* Elimina el borde de enfoque predeterminado */
-    box-shadow: none;  /* Elimina la sombra al hacer focus */
-}
-
+/* Elimina el fondo blanco del icono de cerrar sesión */
 .logout-icon {
-    width: 16px;  /* Icono más pequeño */
+    width: 16px;
     height: 16px;
-    margin-right: 8px;  /* Espacio entre el icono y el texto */
+    margin-right: 8px;
+    background: none;
+    background-color: transparent;
 }
-
-.logout-button span {
-    display: inline;
-    margin-left: 5px;
+.boton1 {
+    background: none;  /* Elimina cualquier fondo */
+    border: none;  /* Elimina cualquier borde */
+    padding: 0;  /* Elimina el padding predeterminado */
 }
-
 
 /* -------------------------------------------------- */
 /* ESTILOS PARA EL CONTENIDO PRINCIPAL                */
