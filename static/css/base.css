@@ -33,12 +33,12 @@ header .logo {
 header .logo-link {
     display: flex;
     align-items: center;
-    text-decoration: none;  /* Asegura que no haya subrayado en el enlace */
+    text-decoration: none;
 }
 
 header .logo-img {
     width: 40px;
-    margin-right: 10px;  /* Espacio entre el icono y el texto */
+    margin-right: 10px;
 }
 
 header .logo-text {
@@ -59,10 +59,13 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 nav ul li {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li a {
@@ -83,12 +86,13 @@ nav ul li a:hover {
     align-items: center;
     margin-left: 20px;
 }
+
 /* -------------------------------------------------- */
 /* BOTÓN CERRAR SESIÓN                               */
 /* -------------------------------------------------- */
 .logout-button {
-    background-color: #39a196;  /* Fondo verde */
-    border: none;  /* Asegura que no haya borde blanco */
+    background-color: #51a139;
+    border: none;
     color: white;
     display: flex;
     align-items: center;
@@ -100,39 +104,28 @@ nav ul li a:hover {
     box-shadow: none;
 }
 
-/* Elimina el fondo blanco del icono de cerrar sesión */
 .logout-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     margin-right: 8px;
-    background: none;
-    background-color: transparent;
 }
+
 .boton1 {
-    background: none;  /* Elimina cualquier fondo */
-    border: none;  /* Elimina cualquier borde */
-    padding: 0;  /* Elimina el padding predeterminado */
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 /* -------------------------------------------------- */
-/* ESTILOS PARA EL CONTENIDO PRINCIPAL                */
+/* ESTILOS PARA EL CONTENIDO PRINCIPAL               */
 /* -------------------------------------------------- */
 main {
     padding: 20px;
 }
 
 /* -------------------------------------------------- */
-/* TITULOS PRINCIPALES                                */
+/* TÍTULOS PRINCIPALES                               */
 /* -------------------------------------------------- */
-h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    letter-spacing: 1px;
-}
 
 .container h3 {
     margin-top: -10px;
@@ -143,21 +136,64 @@ h3 {
 }
 
 /* -------------------------------------------------- */
-/* ESTILOS DE LA DISTRIBUCIÓN DE PÁGINA               */
+/* ESTILOS DE LA DISTRIBUCIÓN DE PÁGINA              */
 /* -------------------------------------------------- */
 .row {
     display: flex;
     gap: 30px;
     justify-content: space-between;
 }
+.form{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ddd;
+}
+
 
 .col-md-6 {
     flex: 1;
     max-width: 48%;
 }
 
+/* Contenedor principal del total */
+.total-container {
+    background-color: #f0fdf4; /* Verde pastel suave */
+    border: 1px solid #d1e7dd; /* Borde verde más oscuro */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Texto del título */
+.total-container h5 {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 1.1rem; /* Tamaño del texto */
+    color: #212529; /* Color de texto neutral */
+}
+
+/* Texto "Total a pagar" */
+.total-container span {
+    font-weight: 600; /* Negrita moderada */
+    color: #4caf50; /* Verde destacado */
+}
+
+/* Estilo del monto total */
+.total-container .total-amount {
+    font-size: 1.5rem; /* Tamaño más grande para resaltar */
+    font-weight: bold; /* Texto en negrita */
+    color: #007bff; /* Azul llamativo */
+}
+
 /* -------------------------------------------------- */
-/* MEDIAS CONSULTAS PARA RESPONSIVIDAD                */
+/* MEDIAS CONSULTAS PARA RESPONSIVIDAD               */
 /* -------------------------------------------------- */
 @media (max-width: 768px) {
     .row {
@@ -168,212 +204,4 @@ h3 {
     .col-md-6 {
         max-width: 100%;
     }
-
-    form.card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* -------------------------------------------------- */
-/* FORMULARIOS Y TARJETAS                             */
-/* -------------------------------------------------- */
-form.card {
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 60%;
-}
-
-form.card .form-label {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-}
-
-form.card input,
-form.card select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-form.card input:focus,
-form.card select:focus {
-    border-color: #4CAF50;
-    outline: none;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
-}
-
-form.card button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form.card button:hover {
-    background-color: #45a049;
-}
-
-/* -------------------------------------------------- */
-/* TABLAS                                             */
-/* -------------------------------------------------- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-table thead {
-    background-color: #4CAF50;
-    color: white;
-}
-
-table th, table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    font-size: 1rem;
-}
-
-table tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-table td {
-    text-align: center;
-}
-
-/* -------------------------------------------------- */
-/* BOTONES Y ACCIONES                                 */
-/* -------------------------------------------------- */
-.btn {
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 14px;
-    transition: all 0.3s ease-in-out;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.btn-primary {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
-}
-
-.btn-primary:active {
-    background-color: #39993e;
-    transform: translateY(0);
-}
-
-.btn-success {
-    background-color: #28a745;
-    color: white;
-    border: none;
-}
-
-.btn-success:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
-
-.btn-success:active {
-    background-color: #1e7e34;
-    transform: translateY(0);
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-    transform: translateY(-2px);
-}
-
-.btn-danger:active {
-    background-color: #bd2130;
-    transform: translateY(0);
-}
-
-/* -------------------------------------------------- */
-/* ICONOS EN BOTONES                                   */
-/* -------------------------------------------------- */
-button i {
-    margin-right: 8px;
-}
-
-/* -------------------------------------------------- */
-/* ESTILOS ESPECÍFICOS PARA TARJETAS Y FORMULARIOS    */
-/* -------------------------------------------------- */
-.card {
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-
-.card-header {
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 12px 12px 0 0;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-header i {
-    margin-right: 10px;
-    font-size: 1.4rem;
-}
-
-.card-body form button {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.form-select, .form-control {
-    width: 100%;
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-.form-select:focus, .form-control:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
 }

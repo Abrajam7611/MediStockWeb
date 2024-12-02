@@ -1,25 +1,36 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/ventas_realizadas.css' %}">
+
 <div class="container mt-4">
-    <h3 class="text-center">Ventas Realizadas</h3>
 
-    <!-- Formulario para filtrar por fecha -->
-    <div class="text-right mb-3">
-        <form method="get" action="{% url 'ventas_realizadas' %}">
-            <input type="date" name="filtro_fecha" class="form-control d-inline-block" style="width: auto;">
-            <button type="submit" class="btn btn-primary">Filtrar por Fecha</button>
-        </form>
-    </div>
+    <h3 class="text-center mb-4">Ventas Realizadas</h3>
 
-    <!-- Botón para exportar a PDF con el filtro de fecha -->
-    <div class="text-right mb-3">
-        <a href="{% url 'reporte_pdf' %}?filtro_fecha={{ request.GET.filtro_fecha }}" class="btn btn-primary">Generar Reporte en PDF</a>
-    </div>
+    <!-- Contenedor principal con dos divs -->
+    <div class="d-flex justify-content-between mb-3">
+        <!-- Div de la izquierda para el formulario y el botón -->
+        <div class="left-column">
+            <!-- Contenedor para Filtrar y Generar Reporte -->
+            <div class="filter-report-container">
+                <!-- Formulario para filtrar por fecha -->
+                <form method="get" action="{% url 'ventas_realizadas' %}" class="formconflicto">
+                    <div class="input-group mb-2">
+                        <input type="date" name="filtro_fecha" class="form-control form-control-sm" style="max-width: 180px;">
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary btn-sm">Filtrar</button>
+                        <button type="submit" formaction="{% url 'reporte_pdf' %}" name="filtro_fecha" value="{{ request.GET.filtro_fecha }}" class="btn btn-success btn-sm">Generar Reporte</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    <!-- Tabla de ventas realizadas -->
-    <div class="row">
-        <div class="col-12">
+        <!-- Div de la derecha para la lista de ventas -->
+        <div class="right-column w-100">
+            <!-- Tabla de ventas realizadas -->
             <div class="card shadow">
                 <div class="card-body">
                     <table class="table table-bordered table-hover">
@@ -33,7 +44,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for venta in ventas_realizadas %}
+                            {% for venta in page_obj %}
                             <tr>
                                 <td>{{ venta.nombre }}</td>
                                 <td>{{ venta.cantidad }}</td>
@@ -48,9 +59,27 @@
                             {% endfor %}
                         </tbody>
                     </table>
+
+                    <!-- Controles de Paginación -->
+                    <div class="pagination-container text-center mt-3">
+                        <span class="pagination">
+                            {% if page_obj.has_previous %}
+                                <a href="?page=1&filtro_fecha={{ request.GET.filtro_fecha }}" class="btn btn-secondary btn-sm">Primera</a>
+                                <a href="?page={{ page_obj.previous_page_number }}&filtro_fecha={{ request.GET.filtro_fecha }}" class="btn btn-secondary btn-sm">Anterior</a>
+                            {% endif %}
+
+                            <span class="page-info">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}&filtro_fecha={{ request.GET.filtro_fecha }}" class="btn btn-secondary btn-sm">Siguiente</a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}&filtro_fecha={{ request.GET.filtro_fecha }}" class="btn btn-secondary btn-sm">Última</a>
+                            {% endif %}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
