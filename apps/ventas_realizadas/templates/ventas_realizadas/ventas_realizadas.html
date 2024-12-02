@@ -4,17 +4,17 @@
 <div class="container mt-4">
     <h3 class="text-center">Ventas Realizadas</h3>
 
-    <!-- Filtros de fecha -->
-    <div class="row mb-4">
-        <div class="col-12">
-            <form method="GET" class="form-inline">
-                <label for="filtro_fecha" class="mr-2">Filtrar por:</label>
-                <select name="filtro_fecha" id="filtro_fecha" class="form-select" onchange="this.form.submit()">
-                    <option value="dia" {% if filtro_fecha == 'dia' %}selected{% endif %}>Hoy</option>
-                    <option value="mes" {% if filtro_fecha == 'mes' %}selected{% endif %}>Este mes</option>
-                </select>
-            </form>
-        </div>
+    <!-- Formulario para filtrar por fecha -->
+    <div class="text-right mb-3">
+        <form method="get" action="{% url 'ventas_realizadas' %}">
+            <input type="date" name="filtro_fecha" class="form-control d-inline-block" style="width: auto;">
+            <button type="submit" class="btn btn-primary">Filtrar por Fecha</button>
+        </form>
+    </div>
+
+    <!-- Botón para exportar a PDF con el filtro de fecha -->
+    <div class="text-right mb-3">
+        <a href="{% url 'reporte_pdf' %}?filtro_fecha={{ request.GET.filtro_fecha }}" class="btn btn-primary">Generar Reporte en PDF</a>
     </div>
 
     <!-- Tabla de ventas realizadas -->
@@ -43,7 +43,7 @@
                             </tr>
                             {% empty %}
                             <tr>
-                                <td colspan="5" class="text-center text-muted">No hay ventas registradas para este periodo</td>
+                                <td colspan="5" class="text-center text-muted">No hay ventas registradas</td>
                             </tr>
                             {% endfor %}
                         </tbody>

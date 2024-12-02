@@ -14,4 +14,5 @@ urlpatterns = [
     path('ventas-realizadas/', include('apps.ventas_realizadas.urls')),  # Este es el include de ventas_realizadas
     path('inventario/', include('apps.inventario.urls')),  # Incluye las rutas de inventario
     path('logout/', LogoutView.as_view(), name='logout'),  # Ruta para cerrar sesión
+    
 ]

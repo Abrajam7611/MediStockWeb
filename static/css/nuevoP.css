@@ -136,3 +136,19 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
     outline: none;
 }
+
+/* Ajuste del contenedor del formulario de ventas */
+.ventas-form-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Ajuste de márgenes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .ventas-form-container {
+        margin-top: 20px; /* Menos espacio en pantallas pequeñas */
+    }
+}

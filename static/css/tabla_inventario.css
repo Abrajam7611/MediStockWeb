@@ -87,28 +87,14 @@ h3 {
     border-bottom: 3px solid #39a196; /* Línea decorativa */
     display: inline-block; /* Ajuste de ancho para la línea */
 }
+
 /* Contenedor para formulario y tabla */
-.row {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-}
-
-/* Ajustar el ancho para que se vean más juntos en pantallas grandes */
-.col-md-6 {
-    flex: 1; /* Asegura que ambos div ocupen el mismo espacio */
-    max-width: 48%; /* Reduce el ancho máximo para acercarlos */
-}
-
-/* Asegurar que en pantallas pequeñas aún se vean bien */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column; /* En pantallas pequeñas, apilar los div */
-        gap: 15px; /* Espacio reducido entre div apilados */
-    }
-    .col-md-6 {
-        max-width: 100%; /* Permite que ocupen todo el ancho */
-    }
+.ventas-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo más claro */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 /* Estilos para el formulario de ventas */
@@ -121,12 +107,6 @@ form.card {
     width: 60%;
 }
 
-form.card .form-label {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-}
-
 form.card input,
 form.card select {
     width: 100%;
@@ -136,13 +116,6 @@ form.card select {
     border: 1px solid #ccc;
     font-size: 1rem;
     transition: all 0.3s ease;
-}
-
-form.card input:focus,
-form.card select:focus {
-    border-color: #4CAF50;
-    outline: none;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
 }
 
 form.card button {
@@ -158,6 +131,30 @@ form.card button {
 
 form.card button:hover {
     background-color: #45a049;
+}
+
+/* Contenedor para formulario y tabla */
+.row {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* Ajustar la posición en pantallas grandes */
+.col-md-6 {
+    flex: 1;
+    max-width: 48%; /* Disminuye el ancho máximo de las columnas para acercarlas */
+}
+
+/* Asegurar que en pantallas pequeñas se vean bien */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Apilar los formularios y tablas */
+        gap: 15px;
+    }
+    .col-md-6 {
+        max-width: 100%; /* Las columnas ocupan el 100% en pantallas pequeñas */
+    }
 }
 
 /* Mejoras en los botones */
