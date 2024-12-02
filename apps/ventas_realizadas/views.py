@@ -5,6 +5,8 @@ from reportlab.pdfgen import canvas
 from datetime import datetime
 import firebase_admin
 from firebase_admin import firestore
+from django.core.paginator import Paginator
+
 
 # Inicializar la aplicación Firebase (si no se ha inicializado aún)
 if not firebase_admin._apps:
@@ -15,7 +17,7 @@ db = firestore.client()
 
 def ventas_realizadas_view(request):
     """
-    Vista para mostrar las ventas realizadas desde Firestore en una plantilla.
+    Vista para mostrar las ventas realizadas desde Firestore en una plantilla con paginación.
     """
     # Obtener las ventas realizadas desde Firestore
     ventas_realizadas_ref = db.collection('ventas').stream()
@@ -30,10 +32,8 @@ def ventas_realizadas_view(request):
         # Obtener la fecha, si es un Timestamp se convierte automáticamente a datetime
         fecha_venta = venta_data['fecha']
         
-        # Asegúrate de que fecha_venta sea de tipo datetime
         if isinstance(fecha_venta, datetime):
-            # No se necesita hacer nada, ya es un datetime
-            pass
+            pass  # Ya es un datetime
         else:
             # Si es un Timestamp de Firestore, se convierte a datetime
             fecha_venta = fecha_venta.to_datetime()  # Firestore Timestamp a datetime
@@ -49,16 +49,20 @@ def ventas_realizadas_view(request):
 
     # Si hay un filtro de fecha, filtrar las ventas
     if filtro_fecha:
-        # Convertir la fecha seleccionada en un objeto datetime
         fecha_filtrada = datetime.strptime(filtro_fecha, "%Y-%m-%d")
         ventas_realizadas = [venta for venta in ventas_realizadas if venta['fecha'].date() == fecha_filtrada.date()]
 
     # Ordenar las ventas por fecha en orden descendente
     ventas_realizadas.sort(key=lambda x: x['fecha'], reverse=True)
 
-    # Renderizar la plantilla con los datos de las ventas
+    # Paginación
+    paginator = Paginator(ventas_realizadas, 7)  # Mostrar 8 ventas por página
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    # Renderizar la plantilla con los datos de las ventas y la paginación
     return render(request, 'ventas_realizadas/ventas_realizadas.html', {
-        'ventas_realizadas': ventas_realizadas
+        'page_obj': page_obj
     })
 
 def generar_reporte_pdf(request):

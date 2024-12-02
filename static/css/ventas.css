@@ -1,0 +1,257 @@
+/* -------------------------------------------------- */
+/* ESTILOS GENERALES PARA LA PÁGINA DE VENTAS REALIZADAS */
+/* -------------------------------------------------- */
+
+/* Título principal de la página */
+.container h3.text-center {
+    color: #4caf50; /* Color destacado en verde */
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Aumenta el tamaño del título */
+}
+
+.form{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* Estilos generales para el contenedor principal */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Div de la izquierda */
+.left-column {
+    width: 30%; /* Ajusta el ancho del formulario y botón */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra los elementos dentro de la columna */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: flex-start; /* Asegura que los elementos se alineen desde el principio */
+}
+
+/* Contenedor para Filtrar y Generar Reporte */
+.filter-report-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Asegura que los elementos se estiren a lo largo del contenedor */
+    gap: 15px; /* Añade espacio entre los elementos */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Estilos para el formulario en el contenedor de filtro */
+.filter-report-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%; /* Asegura que el formulario ocupe todo el ancho disponible */
+}
+
+/* Estilo para el input de fecha */
+.filter-report-container input {
+    max-width: 100%; /* El input ocupa el 100% del contenedor */
+    margin-bottom: 10px;
+}
+
+/* Grupo de botones */
+.filter-report-container .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+    width: 100%; /* Asegura que el grupo de botones ocupe todo el ancho disponible */
+}
+
+/* Botón "Filtrar" */
+.filter-report-container .btn-primary {
+    background-color: #007bff; /* Azul */
+    border-color: #007bff; /* Bordes azules */
+    padding: 10px 15px;
+    flex: 1; /* Hace que el botón ocupe todo el espacio disponible */
+    text-align: center;
+}
+
+/* Botón "Generar Reporte" */
+.filter-report-container .btn-success {
+    background-color: #28a745; /* Verde */
+    border-color: #28a745; /* Bordes verdes */
+    padding: 10px 15px;
+    flex: 1; /* Hace que el botón ocupe todo el espacio disponible */
+    text-align: center;
+}
+
+/* Div de la derecha (lista de ventas realizadas) */
+.right-column {
+    width: 65%; /* Ajusta el ancho de la lista de ventas */
+}
+
+/* Estilo para la tabla de ventas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Agrega espacio arriba de la tabla */
+    font-size: 14px;
+    color: #333;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f9f9f9; /* Fondo gris claro al pasar el cursor */
+}
+
+.table thead th {
+    background-color: #f5f5f5; /* Fondo claro */
+    font-weight: bold;
+    text-align: center;
+}
+
+.table tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Estilo para la fila vacía */
+.table tbody tr td.text-center.text-muted {
+    font-style: italic;
+    color: #999;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .left-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .right-column {
+        width: 100%;
+    }
+
+    .filter-report-container form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filter-report-container .btn {
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------- */
+/* ESTILOS PARA LA PÁGINA DE VENTAS (Agregar Producto y Carrito) */
+/* -------------------------------------------- */
+
+/* Estilos para las tarjetas (Agregar Producto y Carrito) */
+.card-body {
+    padding-top: 5px; /* Reducido el padding superior */
+    padding-bottom: 5px; /* Reducido el padding inferior */
+}
+
+/* Espaciado entre el formulario de agregar productos y la tabla del carrito */
+.row .col-md-6.mb-4 {
+    margin-bottom: 20px; /* Reducido el margen inferior entre las columnas */
+}
+
+/* Estilo para el botón "Agregar al Carrito" */
+.btn-primary.w-100 {
+    margin-top: 10px; /* Reducido el margen superior del botón */
+}
+
+/* Contenedor principal del total */
+.total-container {
+    background-color: #f0fdf4; /* Verde pastel suave */
+    border: 1px solid #d1e7dd; /* Borde verde más oscuro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Texto del título */
+.total-container h5 {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 1.25rem; /* Tamaño del texto */
+    color: #212529; /* Color de texto neutral */
+    align-items: center;
+}
+
+/* Texto "Total a pagar" */
+.total-container span {
+    font-weight: 600; /* Negrita moderada */
+    color: #4caf50; /* Verde destacado */
+}
+
+/* Estilo del monto total */
+.total-container .total-amount {
+    font-size: 1.75rem; /* Tamaño más grande para resaltar */
+    font-weight: bold; /* Texto en negrita */
+    color: #4caf50; 
+}
+
+.text-end{
+    color: #007bff;
+}
+
+
+/* Ajustes adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Eliminar margen extra para pantallas pequeñas */
+    .card-body {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .card-header h5 {
+        margin-bottom: 1px; /* Menos espacio entre el título y el formulario */
+    }
+}
+
+/* Contenedor principal del total */
+.total-container {
+    background-color: #f0fdf4; /* Verde pastel suave */
+    border: 1px solid #d1e7dd; /* Borde verde más oscuro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Texto del título */
+.total-container h5 {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 1.25rem; /* Tamaño del texto */
+    color: #212529; /* Color de texto neutral */
+}
+
+/* Texto "Total a pagar" */
+.total-container span {
+    font-weight: 600; /* Negrita moderada */
+    color: #4caf50; /* Verde destacado */
+}
+
+/* Estilo del monto total */
+.total-container .total-amount {
+    font-size: 1.75rem; /* Tamaño más grande para resaltar */
+    font-weight: bold; /* Texto en negrita */
+    color: #007bff; /* Azul llamativo */
+}

@@ -133,6 +133,20 @@ form.card button:hover {
     background-color: #45a049;
 }
 
+.form{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ddd;
+}
+
+
 /* Contenedor para formulario y tabla */
 .row {
     display: flex;
@@ -180,9 +194,9 @@ button i {
 
 /* Estilos del encabezado de la tarjeta */
 .card-header {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 15px;
+    padding: 5px;
     border-radius: 12px 12px 0 0;
     background-color: #f8f9fa;
     display: flex;
