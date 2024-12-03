@@ -64,14 +64,20 @@ table {
   
   /* Botón de agregar (para alineación a la derecha) */
   .botones.agregar {
-    background-color: #008CBA; /* Azul */
+    background-color: #4CAF50; /* Azul */
     float: right; /* Alinea el botón a la derecha */
-    margin-top: 10px; /* Espacio superior */
-  }
-  
-  .botones.agregar:hover {
-    background-color: #007bb5;
-  }
+    margin-top: 5px; /* Espacio superior */
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    padding: 10px 20px; /* Aumenta el relleno */
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer; /* Muestra un cursor de mano al pasar */
+    transition: transform 0.2s, background-color 0.3s; /* Animaciones */
+}
+
+.botones.agregar:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
   
   /* Estilos previos */
 
