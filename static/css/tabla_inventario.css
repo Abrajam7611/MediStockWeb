@@ -389,3 +389,51 @@ button i {
   .search-button i {
     font-size: 18px;
   }
+
+/* Paginación Estilizada */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;  /* Reducido el margen superior */
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;  /* Menor espacio entre botones */
+}
+
+.pagination a {
+    padding: 6px 12px;  /* Reducido el tamaño de padding */
+    font-size: 0.875rem;  /* Fuente un poco más pequeña */
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+}
+
+.pagination .page-info {
+    align-self: center;
+    padding: 6px 12px;  /* Reducido el padding */
+    font-size: 0.875rem;  /* Fuente un poco más pequeña */
+    font-weight: bold;
+    color: #007bff;
+}
+
+.pagination .btn-secondary {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #ddd;
+    font-size: 0.875rem;  /* Fuente un poco más pequeña */
+    padding: 6px 12px;  /* Reducido el tamaño de padding */
+}
+
+.pagination .btn-secondary:hover {
+    background-color: #e2e6ea;
+}

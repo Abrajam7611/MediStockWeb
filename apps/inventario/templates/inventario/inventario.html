@@ -59,6 +59,23 @@
   </tbody>
 </table>
 
+<!-- Paginación -->
+<div class="pagination-container">
+    <div class="pagination">
+        {% if productos.has_previous %}
+        <a href="?page=1" class="btn-secondary">Primera</a>
+        <a href="?page={{ productos.previous_page_number }}" class="btn-secondary">Anterior</a>
+        {% endif %}
+        
+        <span class="page-info">Página {{ productos.number }} de {{ productos.paginator.num_pages }}</span>
+        
+        {% if productos.has_next %}
+        <a href="?page={{ productos.next_page_number }}" class="btn-secondary">Siguiente</a>
+        <a href="?page={{ productos.paginator.num_pages }}" class="btn-secondary">Última</a>
+        {% endif %}
+    </div>
+</div>
+
 <script src="{% static 'js/filter.js' %}"></script>
 
 {% endblock %}
