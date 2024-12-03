@@ -67,8 +67,8 @@ table {
     background-color: #4CAF50; /* Azul */
     float: right; /* Alinea el botón a la derecha */
     margin-top: 5px; /* Espacio superior */
-    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
-    padding: 10px 20px; /* Aumenta el relleno */
+    font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
+    padding: 5px 10px; /* Aumenta el relleno */
     border-radius: 6px; /* Bordes redondeados */
     cursor: pointer; /* Muestra un cursor de mano al pasar */
     transition: transform 0.2s, background-color 0.3s; /* Animaciones */
