@@ -1,154 +1,91 @@
-/* Estilo general para la página de creación de producto */
-h2 {
-    font-size: 2.5rem;
-    color: #2c3e50; /* Color de texto principal */
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 4px solid #222d32; /* Línea decorativa */
-    padding-bottom: 10px;
-}
-
-/* Estilo para el contenedor del formulario */
-.form-producto {
-    background-color: #f8f9fa; /* Fondo claro */
+/* Contenedor principal del formulario */
+.form-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
 }
 
-/* Estilo para cada grupo de campo */
-.form-group {
+/* Título */
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #2c3e50;
     margin-bottom: 20px;
-    font-size: 1rem;
-    color: #333;
 }
 
-/* Estilo de los campos de entrada */
+/* Diseño del formulario en grid */
+.form-producto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Grupo de formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botón que ocupa toda la fila */
+.full-width {
+    grid-column: span 3; /* Ocupar las 3 columnas */
+}
+
+/* Campos de entrada */
 input, select, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    background-color: #ffffff; /* Fondo blanco para los campos */
+    background-color: #fff;
 }
 
-/* Estilo al pasar el mouse sobre los campos */
-input:focus, select:focus, textarea:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
-    outline: none;
-}
-
-/* Estilo del botón de envío */
+/* Botón de envío */
 .btn-submit {
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 12px 20px;
+    padding: 10px 20px;
     font-size: 1.2rem;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    transition: background-color 0.3s, transform 0.2s;
     font-weight: bold;
-    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilo al pasar el mouse sobre el botón */
 .btn-submit:hover {
     background-color: #45a049;
-    transform: translateY(-2px);
 }
 
-/* Estilo de los enlaces */
-.volver-btn {
+/* Botón de volver */
+.button-back {
     display: inline-block;
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff; /* Azul */
+    background-color: #007bff;
     color: white;
     border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
     text-decoration: none;
     text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilo al pasar el mouse sobre el botón "Volver" */
-.volver-btn:hover {
+.button-back:hover {
     background-color: #0056b3;
-    transform: translateY(-2px);
 }
 
-.volver-btn:active {
-    background-color: #003f7f;
-    transform: translateY(0);
-}
-
-/* Estilo de mensajes de error */
-.error-message {
-    background-color: #fdecea;
-    border: 1px solid #f5c6cb;
-    color: #721c24;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo de los placeholders */
-input::placeholder, select::placeholder, textarea::placeholder {
-    color: #aaa;
-}
-
-/* Mejorar la apariencia de los campos de texto */
-textarea {
-    resize: vertical;
-    min-height: 100px; /* Ajuste de altura mínima */
-}
-
-/* Estilo adicional para una apariencia amigable */
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #2c3e50;
-    font-weight: bold;
-}
-
-/* Agregar un toque visual a los campos de entrada */
-input, select, textarea {
-    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
-}
-
-/* Animación de enfoque */
-input:focus, select:focus, textarea:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
-    outline: none;
-}
-
-/* Ajuste del contenedor del formulario de ventas */
-.ventas-form-container {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-}
-
-/* Ajuste de márgenes en pantallas pequeñas */
+/* Estilo para pantallas más pequeñas */
 @media (max-width: 768px) {
-    .ventas-form-container {
-        margin-top: 20px; /* Menos espacio en pantallas pequeñas */
+    .form-producto-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .full-width {
+        grid-column: span 1; /* Ocupar una sola columna */
     }
 }

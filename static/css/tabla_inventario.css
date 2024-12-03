@@ -306,3 +306,47 @@ form {
 button i {
     margin-right: 8px;
 }
+
+/* Estilo general para la tabla */
+.tabla-inventario {
+    width: 100%;
+    border-collapse: collapse; /* Elimina los espacios entre celdas */
+    margin-top: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezados */
+.tabla-inventario th {
+    background-color: #4caf50; /* Fondo verde */
+    color: #131212; /* Texto blanco */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Filas */
+.tabla-inventario td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternar colores en las filas */
+.tabla-inventario tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-inventario tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para las filas vacías */
+.tabla-inventario td[colspan] {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+    padding: 20px;
+}
