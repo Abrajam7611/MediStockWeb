@@ -1,56 +1,64 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/tabla_inventario.css' %}">
 
-  <h2>Inventario</h2>
+<h2>Inventario</h2>
 
-  <table class="tabla-inventario">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Fecha de Caducidad</th>
-            <th>Lote</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Sustancia</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for producto in productos %}
-        <tr>
-            <td>{{ producto.nombre }}</td>
-            <td>{{ producto.descripcion }}</td>
-            <td>{{ producto.fecha_caducidad|date:"d M Y" }}</td>
-            <td>{{ producto.lote }}</td>
-            <td>${{ producto.precio }}</td>
-            <td>{{ producto.stock }}</td>
-            <td>{{ producto.sustancia }}</td>
-            <td>
-                <a href="{% url 'editar_producto' producto.id %}" class="botones editar">
-                    <i class="fa fa-edit"></i> Editar
-                </a> |
-                <a href="{% url 'eliminar_producto' producto.id %}" class="botones eliminar" onclick="return confirm('¿Estás seguro de que quieres eliminar este producto?')">
-                    <i class="fa fa-trash"></i> Eliminar
-                </a>
-            </td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="8">No hay productos en el inventario.</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-
-  <!-- Botón de agregar alineado a la derecha -->
-  <br>
+<!-- Barra de búsqueda y botón agregar -->
+<div class="search-wrapper">
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Buscar medicamento..." onkeyup="filtrarProductos()">
+    <button class="search-button">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
   <a href="{% url 'crear_producto' %}" class="botones agregar">
     <i class="fa fa-plus"></i> Agregar nuevo producto
   </a>
+</div>
+
+<table class="tabla-inventario">
+  <thead>
+      <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Fecha de Caducidad</th>
+          <th>Lote</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Sustancia</th>
+          <th>Acciones</th>
+      </tr>
+  </thead>
+  <tbody id="productosTabla">
+      {% for producto in productos %}
+      <tr class="producto">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.fecha_caducidad|date:"d M Y" }}</td>
+          <td>{{ producto.lote }}</td>
+          <td>${{ producto.precio }}</td>
+          <td>{{ producto.stock }}</td>
+          <td>{{ producto.sustancia }}</td>
+          <td>
+              <a href="{% url 'editar_producto' producto.id %}" class="botones editar">
+                  <i class="fa fa-edit"></i> Editar
+              </a> |
+              <a href="{% url 'eliminar_producto' producto.id %}" class="botones eliminar" onclick="return confirm('¿Estás seguro de que quieres eliminar este producto?')">
+                  <i class="fa fa-trash"></i> Eliminar
+              </a>
+          </td>
+      </tr>
+      {% empty %}
+      <tr>
+          <td colspan="8">No hay productos en el inventario.</td>
+      </tr>
+      {% endfor %}
+  </tbody>
+</table>
+
+<script src="{% static 'js/filter.js' %}"></script>
+
 {% endblock %}

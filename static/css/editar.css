@@ -163,3 +163,107 @@ textarea {
   resize: vertical;
   min-height: 120px;
 }
+
+
+/* Contenedor principal */
+.editar-producto-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+/* Título */
+.editar-producto-titulo {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Diseño del formulario */
+.editar-producto-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Grupo de formulario */
+.editar-producto-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas */
+.editar-producto-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Campos de entrada */
+.editar-producto-form input,
+.editar-producto-form select,
+.editar-producto-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Campos con foco */
+.editar-producto-form input:focus,
+.editar-producto-form select:focus,
+.editar-producto-form textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+/* Botón de enviar */
+.editar-producto-btn-submit {
+  grid-column: span 3;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.editar-producto-btn-submit:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Botón de regresar */
+.editar-producto-button-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.editar-producto-button-back:hover {
+  background-color: #4CAF50;
+  transform: translateY(-2px);
+}

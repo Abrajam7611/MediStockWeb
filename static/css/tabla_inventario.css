@@ -350,3 +350,42 @@ button i {
     color: #999;
     padding: 20px;
 }
+
+/* Barra de búsqueda */
+.search-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  #search {
+    padding: 10px 30px 10px 15px; /* Agrega espacio para el icono */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    width: 300px;
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #969292; /* Color del icono */
+  }
+  
+  .search-button i {
+    font-size: 18px;
+  }
