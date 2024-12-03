@@ -29,12 +29,24 @@ body {
 
 .login-box {
     border-right: 2px solid #ddd;
+    background: white; /* Degradado en el fondo del formulario */
+    color: white; /* Texto blanco dentro del formulario */
+}
+
+.welcome-box {
+    background-color: #222d32; /* Fondo oscuro en el div de la imagen */
+    color: rgb(0, 0, 0); /* Texto blanco en el div de la imagen */
+    border-radius: 0 10px 10px 0; /* Bordes redondeados solo en la parte derecha */
 }
 
 h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #030303; /* Blanco en el título del formulario */
     text-align: center;
+}
+
+h1 {
+    color: #fcfcff; /* Tono suave en el título del welcome-box */
 }
 
 .input-group {
@@ -45,8 +57,7 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
-    /* Aquí no se centra el texto */
+    color: #000000; /* Texto blanco para las etiquetas */
 }
 
 input {
@@ -61,16 +72,19 @@ button {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #007bff;
+    background-color: #2596be; /* Botón en verde */
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #127092; /* Verde oscuro en hover */
 }
 
 .error-message {
@@ -82,5 +96,5 @@ button:hover {
 .welcome-box img {
     max-width: 80%; /* Reducción del tamaño del logo */
     height: auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
