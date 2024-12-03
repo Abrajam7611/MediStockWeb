@@ -95,25 +95,35 @@ nav ul li a:hover {
     border: none;
     color: white;
     display: flex;
-    align-items: center;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
     cursor: pointer;
     font-size: 14px;
-    padding: 5px 10px;
-    border-radius: 20px;
+    padding: 10px; /* Asegura un espacio uniforme */
+    border-radius: 50%; /* Hace que sea completamente circular */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: none;
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
 }
 
+/* Ícono dentro del botón */
 .logout-icon {
     width: 20px;
     height: 20px;
-    margin-right: 8px;
+    margin: 0; /* Elimina cualquier margen adicional */
+    display: block; /* Asegura que el ícono ocupe el espacio esperado */
 }
 
+/* Estilo adicional para el formulario del botón */
 .boton1 {
     background: none;
     border: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el formulario si es necesario */
 }
 
 /* -------------------------------------------------- */
@@ -189,9 +199,14 @@ main {
 .total-container .total-amount {
     font-size: 1.5rem; /* Tamaño más grande para resaltar */
     font-weight: bold; /* Texto en negrita */
-    color: #007bff; /* Azul llamativo */
+    color: #39a196; /* Azul llamativo */
 }
 
+.tablacarrito{
+    background-color: #4caf50;
+    color: #333;
+    font-weight: bold;
+}
 /* -------------------------------------------------- */
 /* MEDIAS CONSULTAS PARA RESPONSIVIDAD               */
 /* -------------------------------------------------- */

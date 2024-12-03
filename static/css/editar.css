@@ -3,19 +3,19 @@ h2 {
   font-size: 2.5rem;
   color: #333;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 4px solid #4CAF50; /* Línea decorativa */
-  padding-bottom: 10px;
+  border-bottom: 4px solid #39a196; /* Línea decorativa */
+  padding-bottom: 1px;
 }
 
 /* Contenedor del formulario */
 form {
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  padding: 30px;
+  padding: 15px;
   max-width: 600px; /* Ajuste de la amplitud máxima */
   margin: 0 auto;
   display: flex;
@@ -50,15 +50,22 @@ form p {
 form input,
 form select,
 form textarea {
-  padding: 14px;
+  padding: 5px;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 7px;
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   box-sizing: border-box;
   outline: none;
   background-color: #f9f9f9; /* Fondo claro para contraste */
+}
+
+textarea {
+  resize: vertical; /* Permitir solo redimensionar verticalmente */
+  min-height: 30px; /* Altura mínima */
+  max-height: 80px; /* Altura máxima */
+  height: 40px; /* Altura inicial más pequeña */
 }
 
 /* Efecto de enfoque en los campos de entrada */
@@ -76,7 +83,7 @@ button[type="submit"] {
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 14px 24px;
+  padding: 10px 24px;
   font-size: 1.2rem;
   cursor: pointer;
   display: block;
