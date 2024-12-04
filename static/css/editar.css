@@ -24,6 +24,11 @@ form {
   border: 1px solid #ddd; /* Borde sutil */
 }
 
+boton-basura{
+  background: none;
+  border: none;
+}
+
 /* Div que contiene mensajes de error */
 div[style*="color: red"] {
   background-color: #fdecea;
@@ -72,14 +77,14 @@ textarea {
 form input:focus,
 form select:focus,
 form textarea:focus {
-  border-color: #4CAF50;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  border-color: #2596be;
+  box-shadow: 0 0 8px #2596be(76, 175, 80, 0.3);
   outline: none;
 }
 
 /* Botón de envío */
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #2596be;
   color: white;
   border: none;
   border-radius: 10px;
@@ -96,7 +101,7 @@ button[type="submit"] {
 
 /* Efecto hover en el botón de envío */
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #2596be;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -105,7 +110,7 @@ button[type="submit"]:hover {
 a.button-back {
   display: inline-flex; /* Cambiar a flex para alinear el ícono y el texto */
   align-items: center; /* Centra el ícono y el texto verticalmente */
-  background-color: #4CAF50;
+  background-color: #2596be;
   color: white;
   padding: 14px 24px;
   border-radius: 10px;
@@ -119,7 +124,7 @@ a.button-back {
 
 /* Efecto hover en el botón de volver */
 a.button-back:hover {
-  background-color: #45a049;
+  background-color: #2596be;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -223,15 +228,15 @@ textarea {
 .editar-producto-form input:focus,
 .editar-producto-form select:focus,
 .editar-producto-form textarea:focus {
-  border-color: #4caf50;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  border-color: #2596be;
+  box-shadow: 0 0 5px rgb(23, 104, 180);
   outline: none;
 }
 
 /* Botón de enviar */
 .editar-producto-btn-submit {
   grid-column: span 3;
-  background-color: #4caf50;
+  background-color: #2596be;
   color: white;
   border: none;
   border-radius: 5px;
@@ -244,7 +249,7 @@ textarea {
 }
 
 .editar-producto-btn-submit:hover {
-  background-color: #45a049;
+  background-color: #2596be;
   transform: translateY(-2px);
 }
 
@@ -253,7 +258,7 @@ textarea {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #2596be;
   color: white;
   border-radius: 5px;
   font-size: 1rem;
@@ -264,6 +269,6 @@ textarea {
 }
 
 .editar-producto-button-back:hover {
-  background-color: #4CAF50;
+  background-color: #2596be;
   transform: translateY(-2px);
 }

@@ -4,7 +4,7 @@
 
 /* Título principal de la página */
 .container h3.text-center {
-    color: #4caf50; /* Color destacado en verde */
+    color: #2596be; /* Color destacado en verde */
     font-weight: bold;
     margin-bottom: 20px;
     font-size: 2rem; /* Aumenta el tamaño del título */
@@ -87,8 +87,8 @@
 
 /* Botón "Generar Reporte" */
 .filter-report-container .btn-success {
-    background-color: #28a745; /* Verde */
-    border-color: #28a745; /* Bordes verdes */
+    background-color: #2596be; /* Verde */
+    border-color: #2596be; /* Bordes verdes */
     padding: 10px 15px;
     flex: 1; /* Hace que el botón ocupe todo el espacio disponible */
     text-align: center;
@@ -199,14 +199,14 @@
 /* Texto "Total a pagar" */
 .total-container span {
     font-weight: 600; /* Negrita moderada */
-    color: #4caf50; /* Verde destacado */
+    color: #2596be; /* Verde destacado */
 }
 
 /* Estilo del monto total */
 .total-container .total-amount {
     font-size: 1.75rem; /* Tamaño más grande para resaltar */
     font-weight: bold; /* Texto en negrita */
-    color: #4caf50; 
+    color: #2596be; 
 }
 
 .text-end{
@@ -246,7 +246,7 @@
 /* Texto "Total a pagar" */
 .total-container span {
     font-weight: 600; /* Negrita moderada */
-    color: #4caf50; /* Verde destacado */
+    color: #2596be; /* Verde destacado */
 }
 
 /* Estilo del monto total */
@@ -255,3 +255,9 @@
     font-weight: bold; /* Texto en negrita */
     color: #007bff; /* Azul llamativo */
 }
+
+from.boron-basura{
+    background: none;
+    border: none;
+  }
+  

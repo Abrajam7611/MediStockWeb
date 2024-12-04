@@ -319,8 +319,8 @@ button i {
 
 /* Encabezados */
 .tabla-inventario th {
-    background-color: #4caf50; /* Fondo verde */
-    color: #131212; /* Texto blanco */
+    background-color: #389e93; /* Fondo verde */
+    color: #ffffff; /* Texto blanco */
     font-weight: bold;
     text-transform: uppercase;
     padding: 12px 15px;
@@ -368,7 +368,7 @@ button i {
   #search {
     padding: 10px 30px 10px 15px; /* Agrega espacio para el icono */
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #2596be;
     border-radius: 25px;
     outline: none;
     width: 300px;
@@ -383,7 +383,7 @@ button i {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    color: #969292; /* Color del icono */
+    color: #2596be; /* Color del icono */
   }
   
   .search-button i {

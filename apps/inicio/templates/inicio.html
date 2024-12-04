@@ -1,6 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Bienvenido a la página de inicio</h1>
-<p>Contenido de la página de inicio...</p>
+<div class="inicio-contenedor">
+    <h1 class="inicio-titulo">Bienvenido a MediStock</h1>
+    <p class="inicio-subtitulo">Administra tus productos y lleva el control de tu inventario con facilidad.</p>
+    
+    <div class="estadisticas-contenedor">
+        <div class="estadistica-item">
+            <h2 class="estadistica-numero">120</h2>
+            <p class="estadistica-descripcion">Productos registrados</p>
+        </div>
+        <div class="estadistica-item">
+            <h2 class="estadistica-numero">1</h2>
+            <p class="estadistica-descripcion">Productos próximos a vencer</p>
+        </div>
+        <div class="estadistica-item">
+            <h2 class="estadistica-numero">3</h2>
+            <p class="estadistica-descripcion">Productos vendidos</p>
+        </div>
+    </div>
+    <br>
+
+    <!-- Contenedor de las tarjetas -->
+    <div class="tarjetas-contenedor">
+        <div class="tarjeta">
+            <h2 class="tarjeta-titulo">Gestión de Productos</h2>
+            <p class="tarjeta-descripcion">Administra los productos de tu farmacia de manera sencilla y eficiente.</p>
+            <a href="{% url 'inventario' %}" class="tarjeta-boton">Ver más</a>
+        </div>
+        <div class="tarjeta">
+            <h2 class="tarjeta-titulo">Reportes Detallados</h2>
+            <p class="tarjeta-descripcion">Genera reportes detallados de tus ventas e inventario.</p>
+            <a href="{% url 'ventas_realizadas' %}" class="tarjeta-boton">Explorar</a>
+        </div>
+
+    </div>
+</div>
 {% endblock %}

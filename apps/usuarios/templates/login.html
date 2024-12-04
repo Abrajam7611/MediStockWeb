@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <div class="login-container">
+    <div class="main-container">
+        <!-- Div del formulario -->
         <div class="login-box">
+            <h1 class="welcome-text">Bienvenidos a MediStock</h1>
             <h2>Iniciar sesión</h2>
             <form method="POST" action="">
                 {% csrf_token %}
@@ -28,10 +30,24 @@
                 {% endfor %}
             </form>
         </div>
+        
+        <!-- Div del carrusel -->
         <div class="welcome-box">
-            <h1>Bienvenido a MediStock</h1>
-            <img src="{% static 'images/LogoSfondo.png' %}" alt="Farmacia Genéricos">
+            <div class="carousel">
+                <img src="{% static 'images/fondo1.png' %}" alt="Logo 1" class="active">
+                <img src="{% static 'images/fondo4.png' %}" alt="Logo 2">
+                <img src="{% static 'images/fondo3.png' %}" alt="Logo 3">
+                <img src="{% static 'images/fondo2.png' %}" alt="Logo 4">
+                <img src="{% static 'images/LogoSfondo.png' %}" alt="Logo 5">
+            </div>
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
         </div>
-    </div>
+        
+    <script src="{% static 'js/carrusel.js' %}"></script>
 </body>
 </html>
