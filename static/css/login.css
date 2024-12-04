@@ -1,52 +1,45 @@
+/* login.css */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
-    font-family: 'Arial', sans-serif;
-}
-
-.login-container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fc;
     display: flex;
-    width: 80%;
-    max-width: 1000px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.login-box,
-.welcome-box {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 900px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
 }
 
 .login-box {
-    border-right: 2px solid #ddd;
-    background: white; /* Degradado en el fondo del formulario */
-    color: white; /* Texto blanco dentro del formulario */
-}
-
-.welcome-box {
-    background-color: #222d32; /* Fondo oscuro en el div de la imagen */
-    color: rgb(0, 0, 0); /* Texto blanco en el div de la imagen */
-    border-radius: 0 10px 10px 0; /* Bordes redondeados solo en la parte derecha */
-}
-
-h2 {
-    margin-bottom: 20px;
-    color: #030303; /* Blanco en el título del formulario */
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
 }
 
-h1 {
-    color: #fcfcff; /* Tono suave en el título del welcome-box */
+.welcome-text {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333333;
 }
 
 .input-group {
@@ -54,47 +47,109 @@ h1 {
     width: 100%;
 }
 
-label {
+.input-group label {
     display: block;
+    font-size: 14px;
     margin-bottom: 5px;
-    color: #000000; /* Texto blanco para las etiquetas */
+    color: #555555;
 }
 
-input {
+.input-group input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: block;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #2596be; /* Botón en verde */
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 12px;
     font-size: 16px;
+    background-color: #584ef3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
 }
 
 button:hover {
-    background-color: #127092; /* Verde oscuro en hover */
+    background-color: #584ef3;
 }
 
 .error-message {
-    color: rgb(238, 34, 34);
-    text-align: center;
+    color: #ff4d4f;
+    font-size: 14px;
     margin-top: 10px;
 }
 
-.welcome-box img {
-    max-width: 80%; /* Reducción del tamaño del logo */
-    height: auto;
-    margin-top: 10px;
+/* Carrusel */
+/* Carrusel */
+.welcome-box {
+    width: 50%;
+    background-color: #584ef3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinear verticalmente */
+    position: relative; /* Para posicionar los indicadores */
+}
+
+/* Contenedor del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ajusta según tu diseño */
+    overflow: hidden; /* Oculta imágenes fuera del área visible */
+}
+
+/* Imágenes del carrusel */
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Asegura que llenen el espacio */
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transición suave entre imágenes */
+}
+
+/* Imagen activa */
+.carousel img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel img.next {
+    left: 100%;
+}
+
+.carousel img.prev {
+    left: -100%;
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 40px;
+    height: 5px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+.indicator.active {
+    background-color: #006eff;
+    opacity: 1;
 }

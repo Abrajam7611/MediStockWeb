@@ -58,8 +58,8 @@
 /* Botón "Filtrar" */
 /* Estilos para el botón Filtrar */
 .filter-report-container .btn-primary {
-    background-color: #28a745; /* Azul */
-    border-color: #28a745; /* Bordes azules */
+    background-color: #2596be; /* Azul */
+    border-color: #2596be; /* Bordes azules */
     padding: 10px 15px;
     flex: 1; /* Hace que el botón ocupe todo el espacio disponible */
     text-align: center;
@@ -69,8 +69,8 @@
 
 /* Estilos para el botón Generar Reporte */
 .filter-report-container .btn-success {
-    background-color: #28a745; /* Verde */
-    border-color: #28a745; /* Bordes verdes */
+    background-color: #2596be; /* Verde */
+    border-color: #2596be; /* Bordes verdes */
     padding: 10px 15px;
     flex: 1; /* Hace que el botón ocupe todo el espacio disponible */
     text-align: center;
@@ -102,10 +102,10 @@
 }
 
 .table thead th {
-    background-color: #4caf50; /* Fondo claro */
+    background-color: #389e93; /* Fondo claro */
     font-weight: bold;
     text-align: center;
-    color: #131212;
+    color: #ffffff;
 }
 
 .table tbody td {

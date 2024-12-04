@@ -34,7 +34,7 @@
                     <form class="boton1" action="{% url 'logout' %}" method="POST">
                         {% csrf_token %}
                         <button type="submit" class="logout-button" aria-label="Cerrar sesión">
-                            <img src="{% static 'images/logout-icon.png' %}" alt="Icono de cerrar sesión" class="logout-icon">
+                            <i class="fas fa-sign-out-alt logout-icon"></i>
                         </button>
                     </form>
                 </li>

@@ -12,8 +12,8 @@ table {
   }
   
   th {
-    background-color: #4caf50; /* Color de fondo para encabezados */
-    color: #020202; /* Color del texto */
+    background-color: #389e93; /* Color de fondo para encabezados */
+    color: #f5f5f5; /* Color del texto */
     font-weight: bold;
   }
   
@@ -46,11 +46,11 @@ table {
   
   /* Botón de editar */
   .botones.editar {
-    background-color: #4CAF50; /* Verde */
+    background-color: #2596be; /* Verde */
   }
   
   .botones.editar:hover {
-    background-color: #45a049;
+    background-color: #2596be;
   }
   
   /* Botón de eliminar */
@@ -64,7 +64,7 @@ table {
   
   /* Botón de agregar (para alineación a la derecha) */
   .botones.agregar {
-    background-color: #4CAF50; /* Azul */
+    background-color: #2596be; /* Azul */
     float: right; /* Alinea el botón a la derecha */
     margin-top: 5px; /* Espacio superior */
     font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
@@ -75,7 +75,7 @@ table {
 }
 
 .botones.agregar:hover {
-    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+    background-color: #2596be; /* Color más oscuro al pasar el mouse */
     transform: scale(1.05); /* Agranda ligeramente el botón */
 }
   
@@ -84,7 +84,7 @@ table {
 /* Estilo general para los botones de volver */
 .button-back {
   display: inline-block;
-  background-color: #4CAF50;
+  background-color: #2596be;
   color: white;
   padding: 14px 24px;
   border-radius: 10px;
@@ -98,7 +98,7 @@ table {
 
 /* Efecto hover en el botón de volver */
 .button-back:hover {
-  background-color: #45a049;
+  background-color: #2596be;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }

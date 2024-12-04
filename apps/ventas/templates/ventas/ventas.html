@@ -64,7 +64,7 @@
                                 <td>{{ venta.cantidad }}</td>
                                 <td>${{ venta.total }}</td>
                                 <td>
-                                    <form method="POST" style="display: inline;">
+                                    <form method="POST" class="boton-basura" >
                                         {% csrf_token %}
                                         <button type="submit" name="quitar_producto" value="{{ forloop.counter0 }}" class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash-alt"></i>
